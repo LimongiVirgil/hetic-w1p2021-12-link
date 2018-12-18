@@ -74,12 +74,20 @@ red.addEventListener('click', () => {
 
 // gestion du bouton pineapple
 
+// ajout d'écouteur sur le bouton pineapple
+// pineapple.addEventListener('click', () => {
+//   validation.classList.remove('validation--close');
+//   validation.classList.add('validation--open');
+//   pineapple.addEventListener('click', () => {
+//     validation.classList.remove('validation--open');
+//     validation.classList.add('validation--close');
+//   });
+// });
+
 pineapple.addEventListener('click', () => {
-  validation.style.display = "flex";
-  pineapple.addEventListener('click', () => {
-    validation.style.display = "none";
-    });
-  });
+  validation.classList.toggle('is-open');
+});
+
 
   
 
