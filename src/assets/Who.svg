@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="638px" height="342px" viewBox="0 0 638 342" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Who ?</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.5639451%" id="linearGradient-1">
+            <stop stop-color="#FF2100" offset="0%"></stop>
+            <stop stop-color="#300101" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="PhantomFingers, Phantom Fingers" font-size="180" font-weight="normal" letter-spacing="-5.093882">
+        <g id="Accueil" transform="translate(-322.000000, -206.000000)" fill="url(#linearGradient-1)">
+            <text id="Who-?">
+                <tspan x="320" y="472">Who ?</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
