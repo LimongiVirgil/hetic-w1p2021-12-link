@@ -1,3 +1,4 @@
+let solution = ['Teddy', 'teddy'];
 let main = document.getElementById('main');
 let red = document.getElementById('red');
 let messages = document.getElementById('messages');
@@ -15,6 +16,9 @@ let dashboard__music =  document.getElementById('dashboard__music');
 let dashboard__bin =  document.getElementById('dashboard__bin');
 let photos__one = document.getElementById('photos__one');
 let article__miniature = document.getElementById('article__miniature');
+let compteur = 0;
+let validate = document.getElementById('validate');
+let input = document.getElementById('input');
 
 // ajout d'écouteur sur le bouton message
   messages.addEventListener('click', () => {
@@ -158,9 +162,6 @@ for (let i = 0; i < noms.length; i++) {
   })
 
 }
-
-
-  
   toolbar.addEventListener("dragstart", function (event) {
   // Stocke une référence sur l'objet glissable
 });
@@ -173,9 +174,24 @@ toolbar.addEventListener("dragend", function (event) {
 
 }, false);
 
+  validate.addEventListener('click', () => {
+    console.log(input.value)
+  let password = input.value;
+  validate.value = password;
+  console.log(validation.value);
+  if(password === solution[0] || password === solution[1]) {
+    window.location.href = '../screens/end.html';
+  }
 
-footer.addEventListener('click', () => {
-  oxo.screens.loadScreen('end', function() {
-    console.log('ok');
-  });
-});
+  if(password != solution[1] || password != solution[2]) {
+    compteur++
+  }
+
+  if(compteur === 2) {
+    window.location.href = '../screens/loose.html';
+  }
+} );
+
+// timer 
+
+
