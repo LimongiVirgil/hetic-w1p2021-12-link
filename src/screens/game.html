@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +11,21 @@
   <script defer src="../js/script.js"></script>
 
 </head>
+
 <body>
+  <!-- MUSIC AMBIANCE -->
+  <audio id="soundTrack" src="../assets/kaaris-poussiere.mp3" autoplay></audio>
+  <!-- TIMER -->
+  <p id="timer" class="timer"></p>
   <main id="main">
     <div class="dashboard">
       <div class="dashboard__items">
-          <img src="../assets/messages.svg" alt="messages" id="messages">
-          <img src="../assets/photos.svg" alt="photos" id="photos">
-          <img src="../assets/notes.svg" alt="notes" id="notes">
-          <img src="../assets/musiques.svg" alt="music" id="music">          
-          <img src="../assets/bin.svg" alt="bin" id="bin">
+        <img src="../assets/messages.svg" alt="messages" id="messages">
+        <img src="../assets/photos.svg" alt="photos" id="photos">
+        <img src="../assets/notes.svg" alt="notes" id="notes">
+        <img src="../assets/musiques.svg" alt="music" id="music">
+        <img src="../assets/bin.svg" alt="bin" id="bin">
+      <p class="welcome">bienvenue Abigail !</p>
       </div>
       <div id="dashboard__messages" class="dashboard__messages">
         <div class="window">
@@ -26,17 +33,16 @@
           <div class="window__toolbar toolbar">
             <h2 class="toolbar__title">MESSAGES</h2>
             <div class="toolbar__buttons buttons ">
-              <div class="buttons__button"></div>
-              <div class="buttons__button"></div>
-              <div class="buttons__button" id="buttons__button--closeMessages"></div>
+              <img class="buttons__button" id="buttons__button--closeMessages" src="../assets/close.svg" alt="">
+
             </div>
           </div>
-      
+
           <!-- WINDOW MESSAGES-->
           <div class="window__messages messages">
-      
+
             <div class="messages__contacts contacts">
-      
+
               <div class="contacts__contact contact">
                 <div class="contact__picture"></div>
                 <div class="contact__name">Sabrina</div>
@@ -46,7 +52,7 @@
                 <div class="contact__picture"></div>
                 <div class="contact__name">John</div>
               </div>
-      
+
               <div class="contacts__contact contact">
                 <div class="contact__picture"></div>
                 <div class="contact__name">Arthur</div>
@@ -61,102 +67,360 @@
                 <div class="contact__picture"></div>
                 <div class="contact__name">Louis</div>
               </div>
-      
+
             </div>
-      
+            <!-- MESSAGE SABRINA -->
             <div class="messages__conversations conversations">
-              <div class="conversations__conversation"> Tu viens pour mon anniversaire demain ?
-      
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation"> Tu viens pour mon anniversaire demain ?
+                </div>
+                <div class="conversations__time">20:21 </div>
               </div>
-      
-              <div class="conversations__conversation conversations__conversation--me"> Non désolé, j’ai déja une soirée entre fille organisée depuis longtemps
-      
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me"> Non désolé, j’ai déja une
+                  soirée entre fille organisée depuis longtemps
+                </div>
+                <div class="conversations__time">20:21 </div>
               </div>
-              <div class="conversations__conversation">Dommage, mon anniversaire sera différent sans toi :(
-      
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Dommage, mon anniversaire sera différent sans toi :(
+                </div>
+                <div class="conversations__time">20:21</div>
               </div>
-              <div class="conversations__conversation">Alors cette soirée ?</div>
-              <div class="conversations__conversation conversations__conversation--me">Super ! On s’est amusé comme des folles !</div>
-              <div class="conversations__conversation conversations__conversation--me">Et toi ? Ton anniversaire ?</div>
-              <div class="conversations__conversation">Ca va, on s’est bien amusé. J’aurais quand même aimé que tu sois là</div>
-              <div class="conversations__conversation conversations__conversation--me">Là prochaine fois je serais là, tqt
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Alors cette soirée ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Super ! On s’est amusé comme
+                  des
+                  folles !
+                </div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Et toi ? Ton anniversaire ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Ca va, on s’est bien amusé. J’aurais quand même aimé que tu
+                  sois
+                  là
+                </div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Là prochaine fois je serais
+                  là,
+                  tqt
+                </div>
+                <div class="conversations__time">20:21</div>
               </div>
             </div>
-      
+
+            <!-- CONVERSATION JOHN -->
             <div class="messages__conversations conversations">
+
+              <div class="conversation__inner">
                 <div class="conversations__conversation">Bonjour Abigail c’est John</div>
-                <div class="conversations__conversation">Hey Abigail</div>
-                <div class="conversations__conversation">Salut, ça va ?</div>
-                <div class="conversations__conversation">On peut se voir ?</div>
-                <div class="conversations__conversation">Pourquoi tu réponds pas ?</div>
-                <div class="conversations__conversation conversations__conversation--me">Tu peux arrêter de m’envoyer des messages !!!</div>
-                <div class="conversations__conversation">J’aimerais trop qu’on se voit, il y a moyen qu’on aille boire un verre ensemble au bar des Antilopes vers 17h ?</div>
-                <div class="conversations__conversation conversations__conversation--me">D'accord mais pas longtemps</div>
-                <div class="conversations__conversation">Ne t’approche surtout pas de Arthur</div>
-                
+                <div class="conversations__time">20:21</div>
               </div>
-      
-              <div class="messages__conversations conversations">
-                  <div class="conversations__conversation">Hé, c’était sympa cette soirée</div>
-          
-                  <div class="conversations__conversation conversations__conversation--me">Oui, il y avait une très bonne ambiance, la nuit est passé tellement vite !</div>
-                  <div class="conversations__conversation">Carrément. Par contre le mec qui te suivait partout c’était bizarre</div>
-                  <div class="conversations__conversation conversations__conversation--me">Ouais j’en ai marre de lui, ça fait des mois qu’il m'harcèle de messages, il veut pas comprendre que je veux pas le voir :(</div>
-                  <div class="conversations__conversation">Ah bon ?!</div>
-                  <div class="conversations__conversation conversations__conversation--me">En plus il m’a donné un rendez-vous dans un bar aujourd’hui.</div>
-                  <div class="conversations__conversation">Tu sais quoi, laisses moi y aller à ta place, je vais lui dire d'arrêter</div>
-                  <div class="conversations__conversation conversations__conversation--me">Je sais pas trop…</div>
-                  <div class="conversations__conversation">Peut-être qu'il arrêtera de te harceler comme ça ! </div>
-                  <div class="conversations__conversation conversations__conversation--me">si tu veux... on a rendez-vous à 17h au bar des Antilopes, tu vois où c'est ?</div>
-                  <div class="conversations__conversation">T'inquiètes j'vais régler cette histoire </div>
-                  <div class="conversations__conversation conversations__conversation--me">Il faut qu’on se voit, c’est à propos de John, c’est important !</div>
-                  <div class="conversations__conversation">Euh oui, je passe devant chez toi dans 10 minutes</div>
-                </div>
 
-                <div class="messages__conversations conversations">
-                  <div class="conversations__conversation conversations__conversation--me">Bonjour Papa, je suis disponible le 8 janvier au soir, ça vous dirait de venir manger chez moi ?</div>
-                  <div class="conversations__conversation">Bien sûr, nous allons pas manquer une occasion de nous voir, nous te préviendrons à quel heure nous pensons arriver, ta mère et moi somme impatient </div>
-                  <div class="conversations__conversation">Bonjour ma chérie, on sera chez toi demain à 18h.                  </div>
-                  <div class="conversations__conversation conversations__conversation--me">D'accord je vous attends avec impatience, cela fait une éternité que l’on ne s’est pas vue</div>
-                  <div class="conversations__conversation"> Oui. Presque 2 ans !</div>
-                  <div class="conversations__conversation conversations__conversation--me">Je vais vous préparer un superbe dîner :)</div>
-                  <div class="conversations__conversation">Je sens qu’on va se régaler</div>                  
-                  <div class="conversations__conversation">On est en bas depuis 10 minutes, t'es où ma fille ??</div>  
-                  <div class="conversations__conversation">Toujours pas de réponse, tu ne répond pas à mes appels, je commence à m’inquiéter.</div> 
-                  <div class="conversations__conversation">J’ai appelé ton petit ami, il ne sait pas où tu es et tu ne réponds toujours pas. Je crois que je vais appeler la police.</div>               
-                </div>
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Hey Abigail</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Salut, ça va ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">On peut se voir ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Pourquoi tu réponds pas ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Tu peux arrêter de m’envoyer
+                  des
+                  messages !!!</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">J’aimerais trop qu’on se voit, il y a moyen qu’on aille boire
+                  un
+                  verre ensemble au bar des Antilopes vers 17h ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">D'accord mais pas longtemps</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Ne t’approche surtout pas de Arthur</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+            </div>
+
+            <!-- CONVERSATION ARTHUR -->
+            <div class="messages__conversations conversations">
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Hé, c’était sympa cette soirée</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Oui, il y avait une très bonne
+                  ambiance, la nuit est passé tellement vite !</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Carrément. Par contre le mec qui te suivait partout c’était
+                  bizarre</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Ouais j’en ai marre de lui, ça
+                  fait des mois qu’il m'harcèle de messages, il veut pas comprendre que je veux pas le voir :(</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Ah bon ?!</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">En plus il m’a donné un
+                  rendez-vous dans un bar aujourd’hui.</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Tu sais quoi, laisses moi y aller à ta place, je vais lui dire
+                  d'arrêter</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Je sais pas trop…</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Peut-être qu'il arrêtera de te harceler comme ça !</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">si tu veux... on a rendez-vous
+                  à
+                  17h au bar des Antilopes, tu vois où c'est ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">T'inquiètes j'vais régler cette histoire</div>
+                <div class="conversations__time">20:21</div>
+              </div>
 
 
-                <div class="messages__conversations conversations">
-                  <div class="conversations__conversation">Salut Abigail, tu as commencé à faire le projet à rendre pour le 17 janvier ?</div>
-          
-                  <div class="conversations__conversation conversations__conversation--me">Oui un peu, mais j’ai du mal à récolter des données pour le faire</div>
-                  <div class="conversations__conversation">Oui j’ai le même problème, il y a vraiment peu d’information sur le sujet</div>
-                  <div class="conversations__conversation conversations__conversation--me">Je me demande parfois s’il ne fait pas exprès de choisir des sujets avec peu d’informations.</div>
-                  <div class="conversations__conversation">Bah si, c’est sûr, il fait ça pour qu’on progresse j'pense</div>
-                  <div class="conversations__conversation conversations__conversation--me">C’est bien de vouloir nous faire progresser rapidement mais pour ceux qui on déjà du mal…</div>
-                  <div class="conversations__conversation">Ouais c'est sur mais bon...</div>
-                  <div class="conversations__conversation conversations__conversation--me">Tu viens à la soirée du 31 ?</div>
-                  <div class="conversations__conversation">Oui, ça va être génial, il y aura énormément de monde. Et toi tu viens </div>
-                  <div class="conversations__conversation conversations__conversation--me">Oui je viendrais, on essayera de se trouver là bas ! Au fait, si tu veux on peut réviser ensemble, viens chez moi vers le 5 pour qu'on avance sur le projet ensemble</div>
-                  <div class="conversations__conversation">Top ! je voulais te proposer mais j'osais pas lol </div>
-                  <div class="conversations__conversation conversations__conversation--me">Tqt c'est rien on va juste travailler</div>                  
-                  <div class="conversations__conversation">Ouais ouais</div>                  
-                  
-                  
-                </div>
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Il faut qu’on se voit, c’est à
+                  propos de John, c’est important !</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Euh oui, je passe devant chez toi dans 10 minutes</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+            </div>
+
+
+            <!-- CONVERSATION PAPA -->
+            <div class="messages__conversations conversations">
+
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Bonjour Papa, je suis
+                  disponible
+                  le 8 janvier au soir, ça vous dirait de venir manger chez moi ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Bien sûr, nous allons pas manquer une occasion de nous voir,
+                  nous te préviendrons à quel heure nous pensons arriver, ta mère et moi somme impatient.</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Bonjour ma chérie, on sera chez toi demain à 18h.</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">D'accord je vous attends avec
+                  impatience, cela fait une éternité que l’on ne s’est pas vue</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Oui. Presque 2 ans !</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Je vais vous préparer un
+                  superbe
+                  dîner :)</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Je sens qu’on va se régaler.</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">On est en bas depuis 10 minutes, t'es où ma fille ??</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Toujours pas de réponse, tu ne répond pas à mes appels, je
+                  commence à m’inquiéter.</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">J’ai appelé ton petit ami, il ne sait pas où tu es et tu ne
+                  réponds toujours pas. Je crois que je vais appeler la police.</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+            </div>
+
+
+
+            <!-- CONVERSATION LOUIS -->
+            <div class="messages__conversations conversations">
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Salut Abigail, tu as commencé à faire le projet à rendre pour
+                  le
+                  17 janvier ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Oui un peu, mais j’ai du mal à
+                  récolter des données pour le faire</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Oui j’ai le même problème, il y a vraiment peu d’information
+                  sur
+                  le sujet</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Je me demande parfois s’il ne
+                  fait pas exprès de choisir des sujets avec peu d’informations.</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Bah si, c’est sûr, il fait ça pour qu’on progresse j'pense</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">C’est bien de vouloir nous
+                  faire
+                  progresser rapidement mais pour ceux qui on déjà du mal…</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Ouais c'est sur mais bon...</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Tu viens à la soirée du 31 ?</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Oui, ça va être génial, il y aura énormément de monde. Et toi
+                  tu
+                  viens</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Oui je viendrais, on essayera
+                  de
+                  se trouver là bas ! Au fait, si tu veux on peut réviser ensemble, viens chez moi vers le 5 pour qu'on
+                  avance sur le projet ensemble</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Top ! je voulais te proposer mais j'osais pas lol</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Tqt c'est rien on va juste
+                  travailler</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Ouais ouais</div>
+                <div class="conversations__time">20:21</div>
+              </div>
+
+            </div>
           </div>
           <div class="window__inputs inputs">
             <form>
               <label for="write"></label>
               <input type="text" class="inputs__input" name="write" placeholder="Message">
             </form>
-            <div class="inputs__logo"></div>
-      
+            <img class="inputs__logo" src="../assets/send-message.svg" alt="">
+
           </div>
         </div>
 
-      </div> 
+      </div>
 
       <!-- fenetre photos -->
       <div id="dashboard__photos" class="dashboard__photos">
@@ -165,31 +429,72 @@
           <div class="window__toolbar toolbar">
             <h2 class="toolbar__title">PHOTOS</h2>
             <div class="toolbar__buttons buttons ">
-              <div class="buttons__button"></div>
-              <div class="buttons__button"></div>
-              <div class="buttons__button" id="buttons__button--closePhotos"></div>
+              <img class="buttons__button" id="buttons__button--closePhotos" src="../assets/close.svg" alt="">              
             </div>
           </div>
-      
+
           <!-- WINDOW PHOTOS-->
           <div class="photos">
-            <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__one">
-            <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__two">
-            <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__three">
-            <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__four">
-            <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__five">
-            <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__six">
-            <img src="../assets/image__big.png" class="photo__big" id="photo__big--one" alt="">
-            <img src="../assets/image__big.png" class="photo__big" id="photo__big--two" alt="">
-            <img src="../assets/image__big.png" class="photo__big" id="photo__big--three" alt="">
-            <img src="../assets/image__big.png" class="photo__big" id="photo__big--four" alt="">
-            <img src="../assets/image__big.png" class="photo__big" id="photo__big--five" alt="">
-            <img src="../assets/image__big.png" class="photo__big" id="photo__big--six" alt="">
+
+            <!-- PHOTOS SMALL -->
+            <figure>
+              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__one">
+              <figcaption>aaa.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__two">
+              <figcaption>bbb.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__three">
+              <figcaption>ccc.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__four">
+              <figcaption>ddd.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__five">
+              <figcaption>eee.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__six">
+              <figcaption>fff.jpg</figcaption>
+            </figure>
+
+
+            <!-- PHOTOS BIG -->
+            <figure>
+              <img src="../assets/image__big.png" class="photo__big" id="photo__big--one" alt="">
+              <figcaption id="photo__desc--one" class="photo_desc">aaa.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image__big.png" class="photo__big" id="photo__big--two" alt="">
+              <figcaption id="photo__desc--two" class="photo_desc">bbb.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image__big.png" class="photo__big" id="photo__big--three" alt="">
+              <figcaption id="photo__desc--three" class="photo_desc">ccc.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image__big.png" class="photo__big" id="photo__big--four" alt="">
+              <figcaption id="photo__desc--four" class="photo_desc">ddd.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image__big.png" class="photo__big" id="photo__big--five" alt="">
+              <figcaption id="photo__desc--five" class="photo_desc">eee.jpg</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/image__big.png" class="photo__big" id="photo__big--six" alt="">
+              <figcaption id="photo__desc--six" class="photo_desc">fff.jpg</figcaption>
+            </figure>
+
+
           </div>
-          
+
         </div>
 
-      </div> 
+      </div>
 
 
       <!-- FENETRE NOTES -->
@@ -200,12 +505,10 @@
           <div class="window__toolbar toolbar">
             <h2 class="toolbar__title">NOTES</h2>
             <div class="toolbar__buttons buttons ">
-              <div class="buttons__button"></div>
-              <div class="buttons__button"></div>
-              <div class="buttons__button" id="buttons__button--closeNotes"></div>
+              <img class="buttons__button" id="buttons__button--closeNotes" src="../assets/close.svg" alt="">          
             </div>
           </div>
-      
+
           <!-- WINDOW NOTES-->
           <div class="notes">
             <div class="notes__paper notes__paper--one">
@@ -213,18 +516,19 @@
                 Anniversaire de maman: 24 août
                 Code immeuble: 08205
                 MDP compte : ****
-                </p>
+              </p>
             </div>
             <div class="notes__paper notes__paper--two">
               <p>Courses :
-                Lait caillé Eau minérale                              
-                Farine de blé 
-                Levure non chimique  
-                Chocolat noir 
-                Granola caramel  
-                Maoam   
-</p>
-            </div><div class="notes__paper notes__paper--three">
+                Lait caillé Eau minérale
+                Farine de blé
+                Levure non chimique
+                Chocolat noir
+                Granola caramel
+                Maoam
+              </p>
+            </div>
+            <div class="notes__paper notes__paper--three">
               <p>Passer chez le pâtissier ( urgent !!!) </p>
             </div>
           </div>
@@ -234,63 +538,62 @@
                 9 fois ce mois-ci
                 2 fois devant chez moi
                 Il m’a suivie 5 fois
-                </p>
+              </p>
             </div>
             <div class="notes__paper notes__paper--five">
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-            </div><div class="notes__paper notes__paper--six">
+            </div>
+            <div class="notes__paper notes__paper--six">
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
             </div>
           </div>
         </div>
 
-      </div> 
+      </div>
 
-       <!-- FENETRE MUSIC -->
+      <!-- FENETRE MUSIC -->
 
-       <div id="dashboard__music" class="dashboard__music">
+      <div id="dashboard__music" class="dashboard__music">
         <div class="window">
           <!-- TOOLBAR -->
           <div class="window__toolbar toolbar">
             <h2 class="toolbar__title">MUSIQUES</h2>
             <div class="toolbar__buttons buttons ">
-              <div class="buttons__button"></div>
-              <div class="buttons__button"></div>
-              <div class="buttons__button" id="buttons__button--closeMusic"></div>
+              <img class="buttons__button" id="buttons__button--closeMusic" src="../assets/close.svg" alt="">
             </div>
           </div>
-      
+
           <!-- WINDOW MUSIC-->
           <div class="music">
-              <div class="music__assets">
-                <img src="../assets/music/1.png" alt="" id="music__one">
-                <span>Kaaris - Poussière</span>
-              </div>
-              <div class="music__assets">
-                <img src="../assets/music/2.png" alt="" id="music__two">
-                <span>Booba - Petit fille</span>
-              </div>
-              <div class="music__assets">
-                <img src="../assets/music/3.png" alt="" id="music__three">
-                <span>Migos - XXX</span>
-              </div>
-              <div class="music__assets">
-                <img src="../assets/music/4.png" alt="" id="music__four">
-                <span>The  Fray -Be Still</span>
-              </div>
-              <div class="music__assets">
-                <img src="../assets/music/5.png" alt="" id="music__five">
-                <span>Kaaris - Jungle</span>
-              </div>
-              <div class="music__assets">
-                <img src="../assets/music/6.png" alt="" id="music__six">
-                <span>Travis Scott - Play</span>
-              </div>
-              
+            <div class="music__assets">
+              <img class="music__image" src="../assets/music/1.png" alt="" id="music__one">
+              <span>Kaaris - Poussière</span>
+            </div>
+            <div class="music__assets">
+              <img class="music__image" src="../assets/music/2.png" alt="" id="music__two">
+              <span>Booba - Petit fille</span>
+            </div>
+            <div class="music__assets">
+              <img class="music__image" src="../assets/music/3.png" alt="" id="music__three">
+              <span>Migos - XXX</span>
+            </div>
+            <div class="music__assets">
+              <img class="music__image" src="../assets/music/4.png" alt="" id="music__four">
+              <span>The Fray -Be Still</span>
+            </div>
+            <div class="music__assets">
+              <img class="music__image" src="../assets/music/5.png" alt="" id="music__five">
+              <span>Kaaris - Jungle</span>
+            </div>
+            <div class="music__assets">
+              <img class="music__image" src="../assets/music/6.png" alt="" id="music__six">
+              <span>Travis Scott - Play</span>
+            </div>
+
           </div>
         </div>
 
-      </div> 
+      </div>
 
       <!-- FENETRE POUBELLE -->
 
@@ -300,12 +603,10 @@
           <div class="window__toolbar toolbar">
             <h2 class="toolbar__title">CORBEILLE</h2>
             <div class="toolbar__buttons buttons ">
-              <div class="buttons__button"></div>
-              <div class="buttons__button"></div>
-              <div class="buttons__button" id="buttons__button--closeBin"></div>
+                <img class="buttons__button" id="buttons__button--closeBin" src="../assets/close.svg" alt="">
             </div>
           </div>
-      
+
           <!-- WINDOW NOTES-->
           <div class="image__content">
             <img id="article__miniature" src="../assets/miniature_article.png" alt="miniature__article">
@@ -320,18 +621,18 @@
 
 
   <footer class="footer" id="footer">
-  <div class="footer__icon icon">
-    <img id="pineapple" src="../assets/pineapple.svg" alt="pineapple" class="icon__window">
-    <div class="validation--close" id="validation">
-    <input id="input" class="input" type="text" name="validation" placeholder="Qui recherchons nous ?">
-    <button id="validate">Valider</button>
-</div>    
-    <img src="../assets/sound.svg" alt="" class="icon__sound">
-  
-</div>
+    <div class="footer__icon icon">
+      <img id="pineapple" src="../assets/pineapple.svg" alt="pineapple" class="icon__window">
+      <div class="validation--close" id="validation">
+        <input id="input" class="input" type="text" name="validation" placeholder="Qui recherchons nous ?">
+        <button id="validate">Valider</button>
+      </div>
+      <img id="icon__sound" src="../assets/sound.svg" alt="" class="icon__sound">
+    </div>
 
 
-</footer>
- 
+  </footer>
+
 </body>
+
 </html>

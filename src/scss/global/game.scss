@@ -1,43 +1,76 @@
-input[type=text]:focus
-{
-  outline:  none;
+@keyframes welcome{
+  from  {
+     opacity: 1;
+   }
+ to {
+     opacity: 0;
+   }
+ }
+ input[type=text]:focus
+ {
+   outline:  none;
+ }
+ main {
+  background: url('../../src/assets/wallpaper.png');
+  background-size: cover;
 }
-
+input[type=text]:focus {
+  outline: none;
+}
+ .welcome {
+    color:white;
+    font-size: 37px;
+    position: absolute;
+    left: 600px;
+    animation: welcome 2s forwards;
+    text-transform: uppercase;
+  }
 .dashboard {
   height: 720px;
 }
+
 .dashboard__items {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-left: 30px;
   height: 100%;
+
   img {
-
-
     transition: 0.3s;
-    height:60px;
+    height: 60px;
     width: 60px;
 
     &:hover {
       opacity: 0.7;
     }
   }
-    
-  }
-  
+
+}
+
+.timer{
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: none;
+}
 
 .footer {
-  background: #0086ed; 
-  background: -webkit-linear-gradient(top, #0086ed 0%,#50a4e0 100%); /* Chrome10-25,Safari5.1-6 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0086ed', endColorstr='#50a4e0',GradientType=0 ); /* IE6-9 */
-  color:red;
-  height: 40px;
+  background: #0086ed;
+  background: linear-gradient(to bottom, #434446 0%, #37383A 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0086ed', endColorstr='#50a4e0', GradientType=0);
+  /* IE6-9 */
+  color: red;
+  height: 25px;
   position: absolute;
   bottom: 0;
   width: 100%;
-  display:flex;
+  display: flex;
 }
+
 .footer__icon {
   display: flex;
   width: 100%;
@@ -45,44 +78,45 @@ input[type=text]:focus
   align-items: center;
 }
 
-  .icon__window {
-  height:36px;
-  width:36px;
+.icon__window {
+  height: 20px;
+  width: 20px;
+
   &:hover {
     cursor: pointer;
   }
+}
+
+.icon__sound {
+  height: 12px;
+  width: 12px;
+  padding-right: 20px;
+
+  &:hover {
+    cursor: pointer;
   }
-
-  .icon__sound {
-    height:16px;
-    width:16px;
-    padding-right:20px;
-
-    &:hover {
-      cursor: pointer;
-    }
-    }
+}
 
 .validation--close {
   display: none;
 
-  &.is-open{
-      display: flex;
+  &.is-open {
+    display: flex;
   }
 }
 
 .photo {
-  background-color:red;
+  background-color: red;
   width: 1000px;
   height: 700px;
   position: absolute;
-  top:25px;
+  top: 25px;
   right: 100px;
-  display:none;
+  display: none;
 }
 
 .photo--open {
-  display:flex;
+  display: flex;
 }
 
 
@@ -91,7 +125,7 @@ input[type=text]:focus
   width: 1000px;
   height: 500px;
   position: absolute;
-  top:25px;
+  top: 25px;
   right: 100px;
   display: none;
   box-shadow: rgba(0, 0, 0, 0.705) 0px 0px 6px;
@@ -100,92 +134,95 @@ input[type=text]:focus
 }
 
 .dashboard__messages--open {
-  display:flex;
+  display: flex;
 }
 
-.input{
-  background-color:rgba(204, 207, 209, 0.658);
+.input {
+  background-color: rgba(204, 207, 209, 0.658);
   border: none;
   border-radius: 30px;
-  height: 25px;
+  height: 15px;
   align-content: center;
-  width:300px;
+  width: 300px;
   display: flex;
+  margin-right: 10px;
 }
 
 // partie conversation
 
-.window{
-  width:1000px ;
-  height:450px ;
+.window {
+  width: 1000px;
+  height: 450px;
   background: #0F0F0F;
 }
 
-.window__toolbar{
+.window__toolbar {
   height: 50px;
-  background: linear-gradient(to bottom, #434446 0%,#37383A 100%); 
+  background: linear-gradient(to bottom, #434446 0%, #37383A 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.toolbar__buttons{
-  width: 100px;
+.toolbar__buttons {
+  margin-right: 10px;
   height: 100%;
-  background: linear-gradient(to bottom, #434446 0%,#37383A 100%); 
+  background: linear-gradient(to bottom, #434446 0%, #37383A 100%);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
+
 }
 
-.buttons__button{
+.buttons__button {
   width: 20px;
-  background:gold;
   height: 20px;
 }
 
-.toolbar__title{
+.toolbar__title {
   margin-left: 10px;
-  color:white;
+  color: white;
 }
 
-.window__messages{
+.window__messages {
   display: flex;
   height: 400px;
 }
 
-.messages__contacts{
+.messages__contacts {
   width: 250px;
   background: #0F0F0F;
   border-right: .5px solid rgba(255, 255, 255, 0.096);
   overflow: scroll;
 }
 
-.contacts__contact{
+.contacts__contact {
   width: 100%;
   height: 100px;
   background: #0F0F0F;
   border-top: .5px solid rgba(255, 255, 255, 0.096);
   display: flex;
   align-items: center;
- 
+
 }
 
-.contact__picture{
-width: 40px;
-height: 40px;
-background:white;
-border-radius: 30px;
-margin-left: 10px;
+.contact__picture {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 30px;
+  margin-left: 10px;
 }
 
-.contact__name{
-color: white;
-margin-left: 10px;
+.contact__name {
+  color: white;
+  margin-left: 10px;
 }
 
-.messages__conversations{
+
+
+
+.messages__conversations {
   width: 1030px;
   display: none;
   flex-direction: column;
@@ -193,38 +230,57 @@ margin-left: 10px;
   overflow: scroll;
 }
 
-.message__conversations--isOpen{
+
+.message__conversations--isOpen {
   display: flex;
 }
-.conversations__conversation{
+
+
+.conversation__inner--me {
+  align-self: flex-end;
+}
+
+.conversations__conversation {
   width: 600px;
-  background: linear-gradient(to bottom, #DDDDDD 0%,#B4B4B4 100%); 
+  background: linear-gradient(to bottom, #DDDDDD 0%, #B4B4B4 100%);
   border-radius: 30px;
   font-size: 17px;
   padding: 20px;
   margin: 10px;
-  width:auto;
+  width: auto;
   max-width: 400px;
 }
 
-.conversations__conversation--me{
-  align-self: flex-end;
-  background: linear-gradient(to bottom, #4495FF 0%,#0059d2 100%); 
+.conversations__time {
+  color: white;
+  margin-left: 25px;
+
+
+}
+
+
+
+
+.conversations__conversation--me {
+
+  background: linear-gradient(to bottom, #4495FF 0%, #0059d2 100%);
   width: auto;
 }
-.window__inputs{
+
+.window__inputs {
   width: 100%;
   height: 50px;
-  background: #343434; 
-  background: -webkit-linear-gradient(top, #343434 0%,#272727 100%); 
-  display:flex; 
+  background: #343434;
+  background: -webkit-linear-gradient(top, #343434 0%, #272727 100%);
+  display: flex;
   justify-content: space-between;
   align-items: center;
 
-  
+
 }
-.inputs__input{
-  width:900px;
+
+.inputs__input {
+  width: 900px;
   height: 25px;
   margin-left: 15px;
   border-radius: 30px;
@@ -233,12 +289,11 @@ margin-left: 10px;
   border: none;
 }
 
-.inputs__logo{
+.inputs__logo {
   height: 25px;
   width: 25px;
-  background: white;
   border-radius: 30px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 
@@ -247,33 +302,35 @@ margin-left: 10px;
 .dashboard__photos {
   width: 1000px;
   position: absolute;
-  top:65px;
+  top: 65px;
   right: 160px;
   display: none;
   box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 20px;
 }
 
 .dashboard__photos--open {
-  display:flex;
+  display: flex;
 }
 
 
 .photos {
-  height:100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
+
 .photos__miniature {
-    height:60px;
-    width: 60px;
-    padding-right: 20px;
-    transition: 0.5s transform;
-    &:hover {
-      transform: scale(1.2,1.2);
-      opacity: 0.7;
-    }
+  height: 60px;
+  width: 60px;
+  padding-right: 20px;
+  transition: 0.5s transform;
+
+  &:hover {
+    transform: scale(1.2, 1.2);
+    opacity: 0.7;
+  }
 }
 
 .photo__big {
@@ -285,8 +342,15 @@ margin-left: 10px;
 .photo__big--isOpen {
   display: flex;
 }
-    
-  
+
+.photo_desc {
+  display: none;
+}
+
+.photo__desc--isOpen {
+  display: flex;
+}
+
 
 
 
@@ -295,14 +359,14 @@ margin-left: 10px;
 .dashboard__notes {
   width: 1000px;
   position: absolute;
-  top:85px;
+  top: 85px;
   right: 180px;
   display: none;
   box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 20px;
 }
 
 .dashboard__notes--open {
-  display:flex;
+  display: flex;
 }
 
 
@@ -310,34 +374,39 @@ margin-left: 10px;
   display: flex;
   justify-content: center;
 }
+
 .notes__paper {
-width: 140px;
-height: auto;
-margin-top: 10px;
-margin-right: 10px;
-border-radius:10px;
-padding:5px;
+  width: 140px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
-.notes__paper--one{
+.notes__paper--one {
   background: blue;
-  }
+}
 
-.notes__paper--two{
+.notes__paper--two {
   background: red;
-  }
-  .notes__paper--three{
-    background: yellow;
-  }
-  .notes__paper--four{
-    background: gold;
-  }
-  .notes__paper--five{
-    background: teal;
-    }
-    .notes__paper--six{
-      background: cyan;
-      }
+}
+
+.notes__paper--three {
+  background: yellow;
+}
+
+.notes__paper--four {
+  background: gold;
+}
+
+.notes__paper--five {
+  background: teal;
+}
+
+.notes__paper--six {
+  background: cyan;
+}
 
 
 
@@ -346,22 +415,21 @@ padding:5px;
 .dashboard__music {
   width: 1000px;
   position: absolute;
-  top:105px;
+  top: 105px;
   right: 200px;
   display: none;
   box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 20px;
-  
+}
 
-  img {
-    height: 120px;
-    width: 120px;
-    margin-bottom: 10px;
-    transition: 0.7s transform;
+.music__image {
+  height: 120px;
+  width: 120px;
+  margin-bottom: 10px;
+  transition: 0.7s transform;
 
-    &:hover {
-      transform: scale(1.2,1.2);
-      opacity: 0.7;
-    }
+  &:hover {
+    transform: scale(1.2, 1.2);
+    opacity: 0.7;
   }
 }
 
@@ -373,7 +441,7 @@ padding:5px;
 }
 
 .music__assets {
-  color:white;
+  color: white;
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -385,7 +453,7 @@ padding:5px;
 
 
 .dashboard__music--open {
-  display:flex;
+  display: flex;
 }
 
 
@@ -403,6 +471,7 @@ padding:5px;
 .dashboard__bin--open {
   display: flex;
 }
+
 .image__content {
   height: 130px;
   width: 130px;
@@ -414,10 +483,10 @@ padding:5px;
 
   img {
     height: 120px;
-    width:  120px;
+    width: 120px;
     border-radius: 10px;
     transition: 0.4s transform;
-    
+
     &:active {
       transform: scale(.75, .75);
       opacity: 0.7;
@@ -432,7 +501,7 @@ padding:5px;
 
 .article {
   position: absolute;
-  bottom:5px;
+  bottom: 5px;
   left: 220px;
   height: 380px;
   display: none;
@@ -440,4 +509,9 @@ padding:5px;
 
 .article--isOpen {
   display: flex;
+}
+
+figcaption {
+  color: white;
+  text-align: left;
 }

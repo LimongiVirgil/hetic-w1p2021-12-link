@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
 @keyframes move {
   from {
   transform: translateY(-10px);
@@ -6,6 +7,24 @@
     transform: translateY(10px);
     }
 }
+@keyframes presentation {
+  from {
+  transform: translateY(300px);
+  }
+
+  to {
+  transform: translateY(-600px);
+
+  }
+}
+.timer{
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
 
 .index {
   height: 100%;
@@ -34,4 +53,15 @@
     color:white;
     text-transform: uppercase;
   }
+}
+
+.presentation {
+  color:#FF2100;
+  opacity: 0.2;
+  font-size: 40px;
+  text-transform: uppercase;
+  padding:50px;
+  text-align: center;
+  animation: presentation 25s forwards linear;
+  font-family: 'ZCOOL XiaoWei', serif;
 }
