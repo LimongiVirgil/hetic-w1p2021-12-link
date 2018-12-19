@@ -33,8 +33,45 @@ dashboard__photos.classList.add('dashboard__photos--open');
 // // ajout d'écouteur afin de fermer la fenetre photos
   document.getElementById('buttons__button--closePhotos').addEventListener('click', () => {
   dashboard__photos.classList.remove('dashboard__photos--open');
- 
 });
+
+
+// // ouverture photo miniature
+// photos__one.addEventListener('click', () => {
+//   document.getElementById('photo__big').classList.add('photo__big--isOpen');
+// })
+
+// // fermeture photo miniature
+// document.getElementById('photo__big').addEventListener('click', () => {
+//   document.getElementById('photo__big').classList.remove('photo__big--isOpen');
+// }) 
+
+// foncion qui permet d'ouvrir une image 
+const open = (idMiniature, idBig) => {
+  idMiniature.addEventListener('click', () => {
+    document.getElementById(idBig).classList.add('photo__big--isOpen');
+  });
+};
+// fonction qui permet de fermer l'image
+const close = (idBig) => {
+  document.getElementById(idBig).addEventListener('click', () => {
+  document.getElementById(idBig).classList.remove('photo__big--isOpen');
+  });
+};
+
+open(photos__one, 'photo__big--one');
+close('photo__big--one');
+open(photos__two, 'photo__big--two');
+close('photo__big--two');
+open(photos__three, 'photo__big-three');
+close('photo__big--three');
+open(photos__four, 'photo__big--four');
+close('photo__big--four');
+open(photos__five, 'photo__big--five');
+close('photo__big--five');
+open(photos__six, 'photo__big--six');
+close('photo__big--six');
+
 
 
 // // ajout d'écouteur sur le bouton notes
@@ -56,10 +93,6 @@ dashboard__photos.classList.add('dashboard__photos--open');
   document.getElementById('buttons__button--closeMusic').addEventListener('click', () => {
   dashboard__music.classList.remove('dashboard__music--open');
 });
-
-// lancement  de la musique
-let audio = new Audio('poussiere.mp3');
-audio.play();
 
 // // ajout d'écouteur sur le bouton bin
 bin.addEventListener('click', () => {
