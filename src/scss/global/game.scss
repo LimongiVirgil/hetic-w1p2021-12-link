@@ -67,12 +67,6 @@ input[type=text]:focus
   display: none;
 
   &.is-open{
-      background-color:rgba(204, 207, 209, 0.658);
-      border: none;
-      border-radius: 30px;
-      height: 25px;
-      align-content: center;
-      width:300px;
       display: flex;
   }
 }
@@ -194,7 +188,7 @@ margin-left: 10px;
   width: 1030px;
   display: none;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   overflow: scroll;
 }
 
@@ -208,11 +202,14 @@ margin-left: 10px;
   font-size: 17px;
   padding: 20px;
   margin: 10px;
+  width:auto;
+  max-width: 400px;
 }
 
-.conversations__conversation:nth-child(odd){
-  align-self: flex-start;
+.conversations__conversation--me{
+  align-self: flex-end;
   background: linear-gradient(to bottom, #4495FF 0%,#0059d2 100%); 
+  width: auto;
 }
 .window__inputs{
   width: 100%;
@@ -337,7 +334,7 @@ padding:5px;
   position: absolute;
   top:105px;
   right: 200px;
-  // display: none;
+  display: none;
   box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 20px;
   
 

@@ -128,3 +128,10 @@ toolbar.addEventListener("dragend", function (event) {
   win.style.transform = "translate(" + pageX + "px,"+ pageY+ "px)"
 
 }, false);
+
+
+footer.addEventListener('click', () => {
+  oxo.screens.loadScreen('end', function() {
+    console.log('ok');
+  });
+});
