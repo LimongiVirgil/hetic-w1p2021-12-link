@@ -14,6 +14,7 @@ let dashboard__notes =  document.getElementById('dashboard__notes');
 let dashboard__music =  document.getElementById('dashboard__music');
 let dashboard__bin =  document.getElementById('dashboard__bin');
 let photos__one = document.getElementById('photos__one');
+let article__miniature = document.getElementById('article__miniature');
 
 // ajout d'écouteur sur le bouton message
   messages.addEventListener('click', () => {
@@ -63,7 +64,7 @@ open(photos__one, 'photo__big--one');
 close('photo__big--one');
 open(photos__two, 'photo__big--two');
 close('photo__big--two');
-open(photos__three, 'photo__big-three');
+open(photos__three, 'photo__big--three');
 close('photo__big--three');
 open(photos__four, 'photo__big--four');
 close('photo__big--four');
@@ -98,6 +99,16 @@ close('photo__big--six');
 bin.addEventListener('click', () => {
   dashboard__bin.classList.add('dashboard__bin--open');
 });
+
+article__miniature.addEventListener('click', () => {
+  document.getElementById('article__open').classList.add('article--isOpen');
+})
+document.getElementById('article__open').addEventListener('click', () => {
+  document.getElementById('article__open').classList.remove('article--isOpen');
+
+})
+
+
 
 // // ajout d'écouteur afin de fermer la fenetre bin
 document.getElementById('buttons__button--closeBin').addEventListener('click', () => {

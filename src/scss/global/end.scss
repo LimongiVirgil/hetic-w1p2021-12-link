@@ -1,0 +1,18 @@
+.win {
+  display: flex;
+align-items: center;
+justify-content: center;  
+height: 100vh;
+flex-direction: column;
+
+img {
+  height: 200px;
+  margin-bottom: 30px;
+}
+}
+
+.win__title {
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+}
