@@ -242,4 +242,9 @@ for (let i = 0; i < document.querySelectorAll(".window").length; i++) {
 
       document.querySelectorAll(".window")[i].style.zIndex = "1";
     });
-}
+};
+
+// gestion alert click send message 
+document.getElementById('inputs__logo').addEventListener('click', () => {
+  alert('Vous devez être connecté à internet pour envoyer des messages.')
+})
