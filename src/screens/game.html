@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../assets/favicon.ico" />
   <title>Who - Interface mobile</title>
   <link rel="stylesheet" href="../scss/styles.scss" />
   <!-- <script defer src="../js/libs/oxo.js"></script> -->
@@ -14,7 +15,8 @@
 
 <body>
   <!-- MUSIC AMBIANCE -->
-  <audio id="soundTrack" src="../assets/demarrage.mp3" autoplay></audio>
+  <audio src="../assets/demarrage.mp3" autoplay></audio>
+  <audio id="soundTrack" src="../assets/mysterious.mp3" autoplay></audio>
   <!-- TIMER -->
   <!-- <p id="timer" class="timer"></p> -->
   <main id="main">
@@ -643,7 +645,7 @@
               <figcaption id="photo__desc--four" class="photo_desc">Amour.png</figcaption>
             </figure>
             <figure>
-              <img src="../assets/capture.png" class="photo__big" id="photo__big--five" alt="">
+              <img src="../assets/capture.png" class="photo__big photo__big--special" id="photo__big--five" alt="">
               <figcaption id="photo__desc--five" class="photo_desc">Louis.png</figcaption>
             </figure>
             <figure>
@@ -782,16 +784,17 @@
 
 
   <footer class="footer" id="footer">
-    <div class="footer__icon icon">
+    <di v class="footer__icon icon">
       <img id="pineapple" src="../assets/pineapple.svg" alt="pineapple" class="icon__window">
       <div class="validation--close" id="validation">
-        <input id="input" class="input" type="text" name="validation" placeholder="Vous avez 2 chances pour trouver l'individu">
+        <input id="input" class="input" type="text" name="validation" placeholder="Vous avez 1 chance pour trouver l'individu">
         <button id="validate">Valider</button>
       </div>
-      <img id="icon__sound" src="../assets/sound.svg" alt="" class="icon__sound">
+      <img id="icon__sound--on" src="../assets/sound.svg" alt="" class="icon__sound icon__sound--on">
+      <img id="icon__sound--off" src="../assets/sound-muted.svg" alt="" class="icon__sound icon__sound--off">
     </div>
-
-
+ 
+ 
   </footer>
 
 </body>

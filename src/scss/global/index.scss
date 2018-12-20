@@ -4,8 +4,6 @@
   font-family: "Phantom";
   src: url("../../src/assets/fonts/PhantomFingers.ttf");
 }
-
-
 @keyframes move {
   from {
   transform: translateY(90px);
@@ -31,8 +29,6 @@
   left: 50%;
   top: 50%;
 }
-
-
 .index {
   height: 100%;
   display: flex;
@@ -71,7 +67,7 @@
 
 .presentation {
   color:#FF2100;
-  opacity: 0.2;
+  opacity: 0.4;
   font-size: 40px;
   text-transform: uppercase;
   padding:50px;

@@ -20,7 +20,8 @@ let compteur = 0;
 let validate = document.getElementById('validate');
 let input = document.getElementById('input');
 let soundTrack = document.getElementById('soundTrack')
-let soundIcon = document.getElementById('icon__sound')
+let soundIconOn = document.getElementById('icon__sound--on');
+let soundIconOff = document.getElementById('icon__sound--off');
 
 
 
@@ -187,26 +188,24 @@ validate.addEventListener('click', () => {
     compteur++
   }
 
-  if (compteur === 2) {
+  if (compteur === 1) {
     window.location.href = '../screens/loose.html';
   }
 });
 
 // Play/Pause Musique d'ambiance
-let pause = true;
-soundIcon.addEventListener('click', function (event) {
-  if (pause) {
-    soundTrack.pause()
-    // change l'url de l'image son au click
-    event.target.src = "http://localhost:1234/send-message.67a3eaed.svg";
-    pause = false
-  } else {
-    soundTrack.play()
-    event.target.src = "http://localhost:1234/sound.fd90eb0a.svg";
-    pause = true;
-  }
-
-})
+soundIconOn.addEventListener('click', function (event) {
+  soundTrack.pause()
+  event.target.style.display='none'
+  document.getElementById('icon__sound--off').style.display="block"
+ 
+ })
+ soundIconOff.addEventListener('click', function (event) {
+  soundTrack.play()
+  event.target.style.display='none'
+  document.getElementById('icon__sound--on').style.display="block"
+ 
+ })
 
 // TIMER 
 let time = document.getElementById('timer')
