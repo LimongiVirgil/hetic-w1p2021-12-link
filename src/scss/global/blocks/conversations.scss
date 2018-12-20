@@ -1,0 +1,95 @@
+.dashboard__messages {
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.705) 0px 0px 6px;
+}
+
+.dashboard__messages--open {
+  display: flex;
+}
+
+.window__messages {
+  display: flex;
+  height: 400px;
+}
+
+.messages__contacts {
+  width: 250px;
+  background: #0F0F0F;
+  border-right: .5px solid rgba(255, 255, 255, 0.096);
+  overflow: scroll;
+}
+
+.contacts__contact {
+  width: 100%;
+  height: 100px;
+  background: #0F0F0F;
+  border-top: .5px solid rgba(255, 255, 255, 0.096);
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.contact__picture {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+
+.contact__name {
+  color: white;
+  margin-left: 10px;
+}
+
+.messages__conversations {
+  width: 1030px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: scroll;
+}
+
+.message__conversations--isOpen {
+  display: flex;
+}
+
+.conversation__inner--me {
+  align-self: flex-end;
+}
+
+
+.conversations__conversation {
+  width: 600px;
+  background: linear-gradient(to bottom, #DDDDDD 0%, #B4B4B4 100%);
+  border-radius: 30px;
+  font-size: 17px;
+  padding: 20px;
+  margin: 10px;
+  width: auto;
+  max-width: 400px;
+}
+
+.conversations__time {
+  color: white;
+  margin-left: 30px;
+  font-size: 10px;
+}
+
+.conversations__conversation--me {
+  background: linear-gradient(to bottom, #4495FF 0%, #0059d2 100%);
+  width: auto;
+}
+
+figcaption {
+  color: white;
+  text-align: left;
+}

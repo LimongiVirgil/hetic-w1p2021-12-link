@@ -1,0 +1,12 @@
+.dashboard__bin {
+  width: 1000px;
+  position: absolute;
+  top: 155px;
+  right: 230px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 20px;
+}
+
+.dashboard__bin--open {
+  display: flex;
+}

@@ -1,0 +1,42 @@
+.dashboard__music {
+  width: 1000px;
+  position: absolute;
+  top: 105px;
+  right: 200px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 20px;
+}
+
+.dashboard__music--open {
+  display: flex;
+}
+
+.music {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.music__assets {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 140px;
+  width: 140px;
+}
+
+.music__image {
+  height: 120px;
+  width: 120px;
+  margin-bottom: 10px;
+  transition: 0.7s transform;
+
+  &:hover {
+    transform: scale(1.2, 1.2);
+    opacity: 0.7;
+  }
+}

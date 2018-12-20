@@ -99,6 +99,9 @@ close('photo__big--five', 'photo__desc--five');
 open(photos__six, 'photo__big--six', 'photo__desc--six');
 close('photo__big--six', 'photo__desc--six');
 
+open(photos__seven, 'photo__big--seven', 'photo__desc--seven');
+close('photo__big--seven', 'photo__desc--seven');
+
 
 
 // // ajout d'écouteur sur le bouton notes
@@ -184,13 +187,15 @@ validate.addEventListener('click', () => {
     window.location.href = '../screens/end.html';
   }
 
-  if (password != solution[1] || password != solution[2]) {
-    compteur++
-  }
+  // if (password != solution[1] || password != solution[2]) {
+  //   compteur++
+  // }
 
-  if (compteur === 1) {
-    window.location.href = '../screens/loose.html';
-  }
+  // if (compteur === ) {
+   else {
+     window.location.href = '../screens/loose.html';
+   } 
+  // }
 });
 
 // Play/Pause Musique d'ambiance
