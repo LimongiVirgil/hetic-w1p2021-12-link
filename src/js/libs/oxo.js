@@ -14,12 +14,12 @@ window.oxo = {
      */
     move(element, direction, distance, allowOutside) {
       if (!element) {
-        console.error('The element to move was not found');
+        console.error("The element to move was not found");
         return;
       }
 
       if (!distance) {
-        console.error('You must provide a distance to move an element');
+        console.error("You must provide a distance to move an element");
         return;
       }
 
@@ -58,37 +58,37 @@ window.oxo = {
       var newPosition = Object.assign({}, position);
 
       switch (direction) {
-        case 'left':
+        case "left":
           newPosition.x -= distance;
           break;
-        case 'left-up':
+        case "left-up":
           newPosition.y -= distance;
           newPosition.x -= distance;
           break;
-        case 'up':
+        case "up":
           newPosition.y -= distance;
           break;
-        case 'right-up':
+        case "right-up":
           newPosition.y -= distance;
           newPosition.x += distance;
           break;
-        case 'right':
+        case "right":
           newPosition.x += distance;
           break;
-        case 'right-down':
+        case "right-down":
           newPosition.x += distance;
           newPosition.y += distance;
           break;
-        case 'down':
+        case "down":
           newPosition.y += distance;
           break;
-        case 'left-down':
+        case "left-down":
           newPosition.y += distance;
           newPosition.x -= distance;
           break;
         default:
           console.error(
-            'The direction provided (' + direction + ') is not valid'
+            "The direction provided (" + direction + ") is not valid"
           );
           return;
       }
@@ -110,7 +110,7 @@ window.oxo = {
         var values = position[0].match(/-?\d+/g).map(value => parseInt(value));
         return {
           x: values[0],
-          y: values[1],
+          y: values[1]
         };
       } else {
         return { x: 0, y: 0 };
@@ -124,9 +124,9 @@ window.oxo = {
      * @return {string} - The updated transform property
      */
     setPosition(element, position) {
-      var transform = element.style.transform.replace(/translate\(.+\)/, '');
+      var transform = element.style.transform.replace(/translate\(.+\)/, "");
 
-      var translation = 'translate(' + position.x + 'px, ' + position.y + 'px)';
+      var translation = "translate(" + position.x + "px, " + position.y + "px)";
 
       return (element.style.transform = transform + translation);
     },
@@ -136,10 +136,10 @@ window.oxo = {
      * @return {HTMLElement} the element moved
      */
     getMovableElement() {
-      var movableElement = document.querySelector('[data-oxo-movable]');
+      var movableElement = document.querySelector("[data-oxo-movable]");
 
       if (movableElement) {
-        var speed = movableElement.getAttribute('data-oxo-speed');
+        var speed = movableElement.getAttribute("data-oxo-speed");
         speed = speed ? speed : 10;
         oxo.animation.moveElementWithArrowKeys(movableElement, speed);
 
@@ -158,9 +158,9 @@ window.oxo = {
       var pixels = speed > 100 ? Math.round(speed / 100) : 1;
       console.log(pixels);
 
-      document.addEventListener('keydown', function(event) {
-        if (event.key.indexOf('Arrow') === 0) {
-          var direction = event.key.replace('Arrow', '').toLowerCase();
+      document.addEventListener("keydown", function(event) {
+        if (event.key.indexOf("Arrow") === 0) {
+          var direction = event.key.replace("Arrow", "").toLowerCase();
 
           if (pressed.indexOf(direction) === -1) {
             pressed.push(direction);
@@ -183,9 +183,9 @@ window.oxo = {
         }
       });
 
-      document.addEventListener('keyup', function(event) {
-        if (event.key.indexOf('Arrow') === 0) {
-          var direction = event.key.replace('Arrow', '').toLowerCase();
+      document.addEventListener("keyup", function(event) {
+        if (event.key.indexOf("Arrow") === 0) {
+          var direction = event.key.replace("Arrow", "").toLowerCase();
 
           pressed = pressed.filter(key => key !== direction);
           if (!pressed.length) {
@@ -194,7 +194,7 @@ window.oxo = {
           }
         }
       });
-    },
+    }
   },
 
   elements: {
@@ -204,10 +204,10 @@ window.oxo = {
      * @return {HTMLElement} The created element
      */
     createElement(params) {
-      var element = document.createElement(params.type ? params.type : 'div');
+      var element = document.createElement(params.type ? params.type : "div");
 
       if (params.class) {
-        params.class.split(' ').forEach(function(className) {
+        params.class.split(" ").forEach(function(className) {
           element.classList.add(className);
         });
       }
@@ -234,7 +234,7 @@ window.oxo = {
         : document.body;
 
       if (!host) {
-        console.error('No element was found for selector ', +hostSelector);
+        console.error("No element was found for selector ", +hostSelector);
         return;
       }
 
@@ -263,8 +263,8 @@ window.oxo = {
         },
         {
           root: null,
-          rootMargin: '0px',
-          threshold: 1.0,
+          rootMargin: "0px",
+          threshold: 1.0
         }
       );
       observer.observe(element);
@@ -337,7 +337,7 @@ window.oxo = {
         element1Pos.y < element2Pos.y + element2Pos.height &&
         element1Pos.height + element1Pos.y > element2Pos.y
       );
-    },
+    }
   },
 
   inputs: {
@@ -373,7 +373,7 @@ window.oxo = {
       w: 87,
       x: 88,
       y: 89,
-      z: 90,
+      z: 90
     },
     keysListeners: {},
 
@@ -397,7 +397,7 @@ window.oxo = {
 
       oxo.inputs.keysListeners[code] = {
         action: action.bind(this, key),
-        once: once,
+        once: once
       };
     },
 
@@ -417,7 +417,7 @@ window.oxo = {
      * @param {Function} action - The action to execute
      */
     listenArrowKeys(action) {
-      oxo.inputs.listenKeys(['left', 'up', 'right', 'down'], action);
+      oxo.inputs.listenKeys(["left", "up", "right", "down"], action);
     },
 
     /**
@@ -449,14 +449,14 @@ window.oxo = {
 
     /** Cancel the listening of arrow keys */
     cancelArrowKeysListeners() {
-      oxo.inputs.cancelKeysListener(['left', 'up', 'right', 'down']);
+      oxo.inputs.cancelKeysListener(["left", "up", "right", "down"]);
     },
 
     /**
      * This method will be executed on initialization to listen all the keys
      */
     listenAllKeys() {
-      document.addEventListener('keydown', function(event) {
+      document.addEventListener("keydown", function(event) {
         listener = oxo.inputs.keysListeners[event.keyCode];
         if (listener) {
           listener.action();
@@ -476,9 +476,9 @@ window.oxo = {
     getDirectionFromPressedKeys(pressed) {
       var direction = pressed[0];
 
-      ['left-up', 'left-down', 'right-up', 'right-down'].forEach(function(dir) {
+      ["left-up", "left-down", "right-up", "right-down"].forEach(function(dir) {
         if (
-          dir.split('-').every(function(dirPart) {
+          dir.split("-").every(function(dirPart) {
             return pressed.indexOf(dirPart) > -1;
           })
         ) {
@@ -487,7 +487,7 @@ window.oxo = {
       });
 
       return direction;
-    },
+    }
   },
 
   player: {
@@ -497,7 +497,7 @@ window.oxo = {
      * @return {number} The new score
      */
     addToScore(points) {
-      oxo.log('Add ' + points + ' points to the score');
+      oxo.log("Add " + points + " points to the score");
 
       return oxo.player.setScore(oxo.player.getScore() + points);
     },
@@ -507,7 +507,7 @@ window.oxo = {
      * @return {number} The score
      */
     getScore() {
-      return parseInt(localStorage.getItem('score'));
+      return parseInt(localStorage.getItem("score"));
     },
 
     /**
@@ -517,7 +517,7 @@ window.oxo = {
      */
     removeFromScore(points) {
       var newScore = Math.max(0, oxo.player.getScore() - points);
-      oxo.log('Remove ' + points + ' points from the score');
+      oxo.log("Remove " + points + " points from the score");
 
       return oxo.player.setScore(newScore);
     },
@@ -528,8 +528,8 @@ window.oxo = {
      * @return {number} The score
      */
     setScore(points) {
-      localStorage.setItem('score', points);
-      oxo.log('New score is ' + points);
+      localStorage.setItem("score", points);
+      oxo.log("New score is " + points);
 
       oxo.player.refreshScore();
 
@@ -540,16 +540,16 @@ window.oxo = {
      * Refresh the score display
      */
     refreshScore() {
-      var scoreElement = oxo.getElement('score');
+      var scoreElement = oxo.getElement("score");
 
       if (scoreElement) {
         scoreElement.innerText = oxo.player.getScore();
       }
-    },
+    }
   },
 
   screens: {
-    currentScreen: '',
+    currentScreen: "",
     /**
      * Load a new screen (and add matching class to the body)
      * @param {string} name - The name of the html file for the screen to load
@@ -557,12 +557,12 @@ window.oxo = {
      * @return {Promise} - The fetch promise
      */
     loadScreen(name, action) {
-      return fetch('../../screens/' + name + '.html').then(function(response) {
+      return fetch("../../screens/" + name + ".html").then(function(response) {
         if (response.ok) {
           response.text().then(function(html) {
             document.body.innerHTML = html;
-            document.body.setAttribute('class', name);
-            oxo.log('Load screen ' + name);
+            document.body.setAttribute("class", name);
+            oxo.log("Load screen " + name);
             oxo.player.refreshScore();
             oxo.animation.getMovableElement();
 
@@ -580,7 +580,7 @@ window.oxo = {
      */
     getCurrentScreen() {
       return oxo.screens.currentScreen;
-    },
+    }
   },
 
   utils: {
@@ -592,14 +592,14 @@ window.oxo = {
      */
     getRandomNumber(min, max) {
       return Math.floor(Math.random() * (max - min + 1) + min);
-    },
+    }
   },
 
   /**
    * A function that will be run when oxo is called in order to init the game
    */
   init() {
-    oxo.screens.loadScreen('home');
+    oxo.screens.loadScreen("home");
     oxo.inputs.listenAllKeys();
     oxo.player.setScore(0);
   },
@@ -609,7 +609,7 @@ window.oxo = {
    * @param {string} message - The information to log
    */
   log(message) {
-    console.log('%c OXO: ' + message, 'background-color: gold; padding: 5px');
+    console.log("%c OXO: " + message, "background-color: gold; padding: 5px");
   },
 
   /**
@@ -617,8 +617,8 @@ window.oxo = {
    * @param {string} attribute - The data attribute of the element (oxo-data-*)
    */
   getElement(attribute) {
-    return document.querySelector('[data-oxo-' + attribute + ']');
-  },
+    return document.querySelector("[data-oxo-" + attribute + "]");
+  }
 };
 
 window.oxo.init();

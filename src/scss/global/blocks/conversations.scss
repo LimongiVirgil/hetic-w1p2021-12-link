@@ -19,16 +19,16 @@
 
 .messages__contacts {
   width: 250px;
-  background: #0F0F0F;
-  border-right: .5px solid rgba(255, 255, 255, 0.096);
+  background: #0f0f0f;
+  border-right: 0.5px solid rgba(255, 255, 255, 0.096);
   overflow: scroll;
 }
 
 .contacts__contact {
   width: 100%;
   height: 100px;
-  background: #0F0F0F;
-  border-top: .5px solid rgba(255, 255, 255, 0.096);
+  background: #0f0f0f;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.096);
   display: flex;
   align-items: center;
 
@@ -61,15 +61,12 @@
 .message__conversations--isOpen {
   display: flex;
 }
-
 .conversation__inner--me {
   align-self: flex-end;
 }
-
-
 .conversations__conversation {
   width: 600px;
-  background: linear-gradient(to bottom, #DDDDDD 0%, #B4B4B4 100%);
+  background: linear-gradient(to bottom, #dddddd 0%, #b4b4b4 100%);
   border-radius: 30px;
   font-size: 17px;
   padding: 20px;
@@ -85,10 +82,9 @@
 }
 
 .conversations__conversation--me {
-  background: linear-gradient(to bottom, #4495FF 0%, #0059d2 100%);
+  background: linear-gradient(to bottom, #4495ff 0%, #0059d2 100%);
   width: auto;
 }
-
 figcaption {
   color: white;
   text-align: left;

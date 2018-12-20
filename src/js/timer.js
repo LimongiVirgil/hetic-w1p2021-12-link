@@ -1,3 +1,3 @@
-let time = document.getElementById('timer'); 
+let time = document.getElementById("timer");
 
 time.innerText = localStorage.getItem("t") + " secondes ";

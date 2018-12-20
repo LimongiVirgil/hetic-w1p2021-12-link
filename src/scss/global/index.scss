@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
 
 @font-face {
   font-family: "Phantom";
@@ -6,23 +6,22 @@
 }
 @keyframes move {
   from {
-  transform: translateY(90px);
+    transform: translateY(90px);
   }
   to {
     transform: translateY(70px);
-    }
+  }
 }
 @keyframes presentation {
   from {
-  transform: translateY(330px);
+    transform: translateY(330px);
   }
 
   to {
-  transform: translateY(100px);
-
+    transform: translateY(100px);
   }
 }
-.timer{
+.timer {
   color: white;
   font-size: 50px;
   position: absolute;
@@ -41,19 +40,19 @@
   justify-content: center;
   img {
     width: 50%;
-    height:50%;
+    height: 50%;
   }
 }
 
 .index__button {
   color: white;
   animation: move 2s alternate infinite;
-  
+
   a {
     text-decoration: none;
     font-size: 32px;
     font-family: Phantom;
-    color:white;
+    color: white;
     text-transform: uppercase;
     font-size: 23px;
 
@@ -62,16 +61,15 @@
       opacity: 0.5;
     }
   }
-  
 }
 
 .presentation {
-  color:#FF2100;
+  color: #ff2100;
   opacity: 0.4;
   font-size: 40px;
   text-transform: uppercase;
-  padding:50px;
+  padding: 50px;
   text-align: center;
   animation: presentation 7s forwards linear;
-  font-family: 'ZCOOL XiaoWei', serif;
+  font-family: "ZCOOL XiaoWei", serif;
 }
