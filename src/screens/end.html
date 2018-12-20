@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>You won</title>
+  <title>Vous avez perdu !</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../scss/styles.scss" />
-  <script defer src="../js/script.js"></script>
+  <script defer src="../js/timer.js"></script>
+
 </head>
 <body>
- 
+ <section class="background__win">
   <section class="win">
-    <img src="../assets/png-link.png" alt="link_image">
-    <span class="win__title">Vous avez gagner !</span>
-    <span class="win__time">Vous avez mis <span class="win__time--bold">5 minutes </span>pour trouver le coupable !</span>
+    <img src="../assets/link__win.png" alt="link_image">
+    <span class="win__title">Vous avez gagne !</span>
+    <span class="win__time">Vous avez mis <span id="timer" class="win__time--bold"> </span>pour trouver le coupable !</span>
   </section>
 
-  
+  </section>
 </body>
 </html>

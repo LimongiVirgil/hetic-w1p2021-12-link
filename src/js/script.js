@@ -140,19 +140,6 @@ document.getElementById('buttons__button--closeBin').addEventListener('click', (
   dashboard__bin.classList.remove('dashboard__bin--open');
 });
 
-
-// gestion du bouton pineapple
-
-// ajout d'écouteur sur le bouton pineapple
-// pineapple.addEventListener('click', () => {
-//   validation.classList.remove('validation--close');
-//   validation.classList.add('validation--open');
-//   pineapple.addEventListener('click', () => {
-//     validation.classList.remove('validation--open');
-//     validation.classList.add('validation--close');
-//   });
-// });
-
 pineapple.addEventListener('click', () => {
   validation.classList.toggle('is-open');
 });
@@ -183,17 +170,7 @@ for (let i = 0; i < noms.length; i++) {
   })
 
 }
-toolbar.addEventListener("dragstart", function (event) {
-  // Stocke une référence sur l'objet glissable
-});
 
-toolbar.addEventListener("dragend", function (event) {
-  var e = e || window.event;
-  var pageX = e.pageX - 50;
-  var pageY = e.pageY - 50;
-  win.style.transform = "translate(" + pageX + "px," + pageY + "px)"
-
-}, false);
 
 validate.addEventListener('click', () => {
   console.log(input.value)
@@ -201,6 +178,8 @@ validate.addEventListener('click', () => {
   validate.value = password;
   console.log(validation.value);
   if (password === solution[0] || password === solution[1]) {
+    localStorage.setItem("t",t);
+    stopFunction();
     window.location.href = '../screens/end.html';
   }
 
@@ -235,18 +214,28 @@ let t = 0;
 
 // fonction arret du timer
 let stopFunction = function myStopFunction(){
-  if (t > 1000) {
+
   clearInterval(count)
-}
+
 }
 // increment
 const timer = function () {
   t++
-  time.innerText = t
-  stopFunction()
+
 
 }
 let count = setInterval(timer, 1000);
 
 // gestion de la superposition des fenêtres 
-
+for (let i = 0; i < document.querySelectorAll('.window').length; i++) {
+  document.querySelectorAll('.window')[i].addEventListener('click',function(event){
+ 
+    for (let i = 0; i < document.querySelectorAll('.window').length; i++) {
+      document.querySelectorAll('.window')[i].style.zIndex="0"
+ 
+    }
+ 
+    document.querySelectorAll('.window')[i].style.zIndex="1"
+  })
+ 
+ }

@@ -30,12 +30,18 @@ input[type=text]:focus {
   outline: none;
 }
  .welcome {
+   display: flex;
+   justify-content: center;
+   align-items: center;
     color:white;
-    font-size: 37px;
-    position: absolute;
-    left: 600px;
+    font-size: 47px;
     animation: welcome 2s forwards;
     text-transform: uppercase;
+
+    span {
+      position: absolute;
+      top:50%;
+    }
   }
 .dashboard {
   height: 720px;

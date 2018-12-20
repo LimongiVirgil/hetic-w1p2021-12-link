@@ -16,11 +16,11 @@
 }
 @keyframes presentation {
   from {
-  transform: translateY(300px);
+  transform: translateY(330px);
   }
 
   to {
-  transform: translateY(-600px);
+  transform: translateY(100px);
 
   }
 }
@@ -76,6 +76,6 @@
   text-transform: uppercase;
   padding:50px;
   text-align: center;
-  animation: presentation 25s forwards linear;
+  animation: presentation 7s forwards linear;
   font-family: 'ZCOOL XiaoWei', serif;
 }
