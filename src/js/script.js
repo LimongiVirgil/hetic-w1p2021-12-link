@@ -1,4 +1,4 @@
-let solution = ['Teddy', 'teddy'];
+let solution = ['Arthur', 'arthur'];
 let main = document.getElementById('main');
 let red = document.getElementById('red');
 let messages = document.getElementById('messages');
@@ -247,3 +247,6 @@ const timer = function () {
 
 }
 let count = setInterval(timer, 1000);
+
+// gestion de la superposition des fenêtres 
+

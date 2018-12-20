@@ -66,7 +66,7 @@ input[type=text]:focus {
   position: absolute;
   left: 50%;
   top: 50%;
-  display: none;
+  // display: none;
 }
 
 .footer {
@@ -320,8 +320,8 @@ input[type=text]:focus {
 }
 
 .photos__miniature {
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   padding-right: 20px;
   transition: 0.5s transform;
 
@@ -376,34 +376,34 @@ input[type=text]:focus {
 .notes__paper {
   width: 140px;
   height: auto;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top: 30px;
+  margin-right: 60px;
   border-radius: 10px;
   padding: 5px;
 }
 
 .notes__paper--one {
-  background: blue;
+  background: #f8c291;
 }
 
 .notes__paper--two {
-  background: red;
+  background: #1e3799;
 }
 
 .notes__paper--three {
-  background: yellow;
+  background: #079992;
 }
 
 .notes__paper--four {
-  background: gold;
+  background: #b71540;
 }
 
 .notes__paper--five {
-  background: teal;
+  background: #fa983a;
 }
 
 .notes__paper--six {
-  background: cyan;
+  background: #82ccdd;
 }
 
 

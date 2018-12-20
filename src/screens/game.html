@@ -16,7 +16,7 @@
   <!-- MUSIC AMBIANCE -->
   <audio id="soundTrack" src="../assets/demarrage.mp3" autoplay></audio>
   <!-- TIMER -->
-  <p id="timer" class="timer"></p>
+  <!-- <p id="timer" class="timer"></p> -->
   <main id="main">
     <div class="dashboard">
       <div class="dashboard__items">
@@ -28,9 +28,9 @@
         </div>
       </div>
       <div id="dashboard__messages" class="dashboard__messages">
-        <div class="window">
+        <div class="window" >
           <!-- TOOLBAR -->
-          <div class="window__toolbar toolbar">
+          <div class="window__toolbar toolbar" id="window__toolbar">
             <h2 class="toolbar__title">MESSAGES</h2>
             <div class="toolbar__buttons buttons ">
               <img class="buttons__button" id="buttons__button--closeMessages" src="../assets/close.svg" alt="">
@@ -44,28 +44,34 @@
             <div class="messages__contacts contacts">
 
               <div class="contacts__contact contact">
-                <div class="contact__picture"></div>
+                <img src="../assets/sabrina.png" class="contact__picture" alt="sabrina">
                 <div class="contact__name">Sabrina</div>
               </div>
 
               <div class="contacts__contact contact">
-                <div class="contact__picture"></div>
+                <img src="../assets/john.png" class="contact__picture" alt="john">
+
                 <div class="contact__name">John</div>
               </div>
 
               <div class="contacts__contact contact">
-                <div class="contact__picture"></div>
+                <img src="../assets/arthur.png" class="contact__picture" alt="arthur">
                 <div class="contact__name">Arthur</div>
               </div>
 
               <div class="contacts__contact contact">
-                <div class="contact__picture"></div>
+                <img src="../assets/papa.png" class="contact__picture" alt="papa">
                 <div class="contact__name">Papa</div>
               </div>
 
               <div class="contacts__contact contact">
-                <div class="contact__picture"></div>
+                <img src="../assets/louis.png" class="contact__picture" alt="louis">
                 <div class="contact__name">Louis</div>
+              </div>
+
+              <div class="contacts__contact contact">
+                <img src="../assets/lisa.png" class="contact__picture" alt="lisa">
+                <div class="contact__name">Lisa</div>
               </div>
 
             </div>
@@ -85,38 +91,121 @@
                 <div class="conversations__time">20:21 </div>
               </div>
 
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Je viens de parler à Lisa, elle
+                  vient de me dire que tu lui avait volé son mec.
+                </div>
+                <div class="conversations__time">18/12/17 20:07 </div>
+              </div>
+  
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Non c’est faux, tu me connais très bien, tu sais que je ne suis
+                  pas ce genre de fille !!
+                </div>
+                <div class="conversations__time">20:09</div>
+              </div>
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Je sais, c’est ce que je lui ai
+                  dit. Apparement c’est Julien qui lui aurait raconté que tu lui avait volé son mec.</div>
+                <div class="conversations__time">20:10</div>
+              </div>
+  
+              <div class="conversation__inner">
+                <div class="conversations__conversation">C’est un menteur !! Tu te souviens de ce qui s’était passé le
+                  Noël dernier ? ...
+                </div>
+                <div class="conversations__time">20:10</div>
+              </div>
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Oui je m’en souviens .. Je vais
+                  essayer de persuader Lisa.</div>
+                <div class="conversations__time">20:11</div>
+              </div>
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Alors ça va mieux avec Lisa
+                  depuis l’autre fois ?</div>
+                <div class="conversations__time">30/12/17 15:52</div>
+              </div>
+  
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Oui, on s’est expliqué avant-hier.
+                </div>
+                <div class="conversations__time">15:56</div>
+              </div>
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Cool, heureuse que les choses se
+                  soit régler entre vous.</div>
+                <div class="conversations__time">15:57</div>
+              </div>
+  
+  
+              <div class="conversation__inner">
+                <div class="conversations__conversation">D’ailleur tu ne ma toujours pas répondu. Tu viens pour mon
+                  anniversaire demain ?
+                </div>
+                <div class="conversations__time">16:02</div>
+              </div>
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Non désolé, j’ai déja une soirée
+                  entre fille organisée depuis longtemps.</div>
+                <div class="conversations__time">16:08</div>
+              </div>
+  
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Dommage, mon anniversaire sera différent sans toi :(
                 </div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">16:09</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Alors cette soirée ?</div>
-                <div class="conversations__time">20:21</div>
-              </div>
-
-              <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">Grave ! c'était trop bien franchement tu aurais du venir, t'as loupé mdrrr
+                <div class="conversations__conversation">Alors cette soirée ?
                 </div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">01/01/18 15:38</div>
               </div>
-
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Super ! On s’est amusé comme des
+                  folles !</div>
+                <div class="conversations__time">15:39</div>
+              </div>
+  
+  
               <div class="conversation__inner--me">
                 <div class="conversations__conversation conversations__conversation--me">Et toi ? Ton anniversaire ?</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">15:39</div>
               </div>
-
+  
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Ca va, on s’est bien amusé. J’aurais quand même aimé que tu sois là
+                <div class="conversations__conversation">Ca va, on s’est bien amusé. J’aurais aimé que tu sois là quand
+                  même.
                 </div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">15:40</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">Là prochaine fois je serais
-                  là, tqt ! </div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">La prochaine fois je serais là,
+                  tqt</div>
+                <div class="conversations__time">15:41</div>
+              </div>
+  
+  
+              <div class="conversation__inner">
+                <div class="conversations__conversation">D'ailleur merci pour ton cadeau, il est génial !
+                </div>
+                <div class="conversations__time">15:42</div>
+              </div>
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">Merci !!! Je savais qu’il te
+                  plairait, je te connais par coeur.</div>
+                <div class="conversations__time">15:43</div>
               </div>
             </div>
 
@@ -125,120 +214,124 @@
 
               <div class="conversation__inner">
                 <div class="conversations__conversation">Bonjour Abigail c’est John</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">09/12/17 10:13</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Hey Abigail</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">12/12/17 18:32</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Salut, ça va ?</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">14/12/17 18:32</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">On peut se voir ?</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">18/12/17 10:58</div>
               </div>
-
-              <div class="conversation__inner">
-                <div class="conversations__conversation">Pourquoi tu réponds pas ?</div>
-                <div class="conversations__time">20:21</div>
-              </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">Tu peux arrêter de m’envoyer des messages !!!</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">Tu peux arrêter de m’envoyer des
+                  messages !!!</div>
+                <div class="conversations__time">14:08</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">J’aimerais trop qu’on se voit, il y a moyen qu’on aille boire un verre ensemble au bar des Antilopes vers 17h ?</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">J’aimerais trop qu’on se voit, il y a moyen qu’on aille boire un
+                  verre ensemble au Kirby’es à 17h00 ?</div>
+                <div class="conversations__time">01/01/18 11:05</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">D'accord mais pas longtemps</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">D'accord.</div>
+                <div class="conversations__time">14:40</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Ne t’approche surtout pas de Arthur</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Ne t’approche plus jamais d’ Arthur. Tu m’as bien compris ?</div>
+                <div class="conversations__time">08/01/18 10:44</div>
               </div>
-
+  
             </div>
 
             <!-- CONVERSATION ARTHUR -->
             <div class="messages__conversations conversations">
 
               <div class="conversation__inner">
-                <div class="conversations__conversation">Hé, c’était sympa cette soirée</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Heyy elle était super sympa la soirée d’hier !!</div>
+                <div class="conversations__time">01/01/18 14:29</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">Oui, il y avait une très bonne ambiance, la nuit est passé tellement vite !</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">Oui, il y avait une très bonne
+                  ambiance, la nuit est passé rapidement.</div>
+                <div class="conversations__time">14:34</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Carrément. Par contre le mec qui te suivait partout c’était bizarre</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Carrément. Par contre le mec qui te suivait partout c’était
+                  bizarre</div>
+                <div class="conversations__time">14:34</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">Ouais j’en ai marre de lui, ça fait des mois qu’il m'harcèle de messages, il veut pas comprendre que je veux pas le voir :(</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">Ouais j’en ai marre de lui, ça
+                  fait des mois qu’il me harcèle.</div>
+                <div class="conversations__time">14:35</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Ah bon ?!</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">14:36</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">En plus il m’a donné un rendez-vous dans un bar aujourd’hui.</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">En plus il m’a donné un
+                  rendez-vous dans un bar aujourd’hui.</div>
+                <div class="conversations__time">14:36</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Tu sais quoi, laisses moi y aller à ta place, je vais lui dire d'arrêter</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Tu sais quoi, laisses moi y aller à ta place, je vais lui dire
+                  d'arrêter</div>
+                <div class="conversations__time">14:37</div>
               </div>
-
+  
               <div class="conversation__inner--me">
                 <div class="conversations__conversation conversations__conversation--me">Je sais pas trop…</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">14:38</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Peut-être qu'il arrêtera de te harceler comme ça !</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">14:38</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">si tu veux... on a rendez-vous à 17h au bar des Antilopes, tu vois où c'est ?</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">Ok, on a rendez-vous à 17h au
+                  Kirby’es, tu vois où est-ce que c’est ?</div>
+                <div class="conversations__time">14:40</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">T'inquiètes j'vais régler cette histoire</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Oui ne t’inquiéte pas.</div>
+                <div class="conversations__time">14:41</div>
               </div>
-
-
+  
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">Il faut qu’on se voit, c’est à propos de John, c’est important !</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">Il faut qu’on se voit, c’est à
+                  propos de John, c’est important !</div>
+                <div class="conversations__time">08/01/18 12:18</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Euh oui, je passe devant chez toi dans 10 minutes</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Ok, je passe devant chez toi dans 10 minutes.</div>
+                <div class="conversations__time">12:22</div>
               </div>
-
+  
             </div>
 
 
@@ -250,54 +343,77 @@
                 <div class="conversations__conversation conversations__conversation--me">Bonjour Papa, je suis
                   disponible
                   le 8 janvier au soir, ça vous dirait de venir manger chez moi ?</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">03/01/18 10:11</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Bien sûr, nous allons pas manquer une occasion de nous voir, nous te préviendrons à quel heure nous pensons arriver, ta mère et moi somme impatient.</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Bien sûr, nous allons pas manquer une occasion de nous voir,
+                  nous te préviendrons à quel heure nous pensons arriver, ta mère et moi somme impatient.</div>
+                <div class="conversations__time">10:24</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Bonjour ma chérie, on sera chez toi demain à 18h.</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">05/01/18 09:42</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">D'accord je vous attends avec impatience, cela fait une éternité que l’on ne s’est pas vue</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">D'accord je vous attends avec
+                  impatience, cela fait une éternité que l’on ne s’est pas vue</div>
+                <div class="conversations__time">09:49</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Oui. Presque 2 ans !</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">09:50</div>
               </div>
-
+  
               <div class="conversation__inner--me">
-                <div class="conversations__conversation conversations__conversation--me">Je vais vous préparer un superbe dîner :)</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation conversations__conversation--me">Je vais vous préparer un superbe
+                  dîner pour cette occasion :)</div>
+                <div class="conversations__time">09:51</div>
               </div>
-
+  
               <div class="conversation__inner">
                 <div class="conversations__conversation">Je sens qu’on va se régaler.</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__time">09:52</div>
               </div>
-
+  
+              <div class="conversation__inner--me">
+                <div class="conversations__conversation conversations__conversation--me">N’oubliez pas, venez à 18h chez
+                  moi.</div>
+                <div class="conversations__time">08/01/2018 10:23</div>
+              </div>
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">On est en bas depuis 10 minutes, t'es où ma fille ??</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Oui nous serons à l’heure ne t'inquiète pas pour ça.</div>
+                <div class="conversations__time">10:29</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">Toujours pas de réponse, tu ne répond pas à mes appels, je commence à m’inquiéter.</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Pour fêter nos retrouvailles, je viens d’acheter une bouteille
+                  de Polia à l’épicerie !!</div>
+                <div class="conversations__time">16:23</div>
               </div>
-
+  
               <div class="conversation__inner">
-                <div class="conversations__conversation">J’ai appelé ton petit ami, il ne sait pas où tu es et tu ne réponds toujours pas. Je crois que je vais appeler la police.</div>
-                <div class="conversations__time">20:21</div>
+                <div class="conversations__conversation">Ta mère et moi sommes en bas de chez toi depuis 10 minutes mais
+                  tu ne réponds pas, où-es-tu ?</div>
+                <div class="conversations__time">18:25</div>
               </div>
-
+  
+              <div class="conversation__inner">
+                <div class="conversations__conversation">Toujours pas de réponse, tu ne répond pas à mes appels, je
+                  commence à m’inquiéter.</div>
+                <div class="conversations__time">18:35</div>
+              </div>
+  
+              <div class="conversation__inner">
+                <div class="conversations__conversation">J’ai appelé ton petit ami, il ne sait pas où tu es et tu ne
+                  réponds toujours pas. Je crois que je vais appeler la police.</div>
+                <div class="conversations__time">18:48</div>
+              </div>
+  
             </div>
 
 
@@ -373,6 +489,85 @@
               </div>
 
             </div>
+            <!-- MESSAGE LISA -->
+          <div class="messages__conversations conversations">
+
+            <div class="conversation__inner--me">
+              <div class="conversations__conversation conversations__conversation--me">Hello, ça va ?
+              </div>
+              <div class="conversations__time">18/12/17 19:48</div>
+            </div>
+
+            <div class="conversation__inner">
+              <div class="conversations__conversation">Non ! David m’a quitter :’(
+              </div>
+              <div class="conversations__time">19:54</div>
+            </div>
+
+            <div class="conversation__inner--me">
+              <div class="conversations__conversation conversations__conversation--me">Pourquoi ?! qu’est ce qui c’est passer !?</div>
+              <div class="conversations__time">19:55</div>
+            </div>
+
+            <div class="conversation__inner">
+              <div class="conversations__conversation">Il m’a dit qu’il en avait marre de notre relations et qu’il avait trouvé mieux ailleurs.
+              </div>
+              <div class="conversations__time">19:56</div>
+            </div>
+
+            <div class="conversation__inner--me">
+              <div class="conversations__conversation conversations__conversation--me">Et tu sais avec qui ?</div>
+              <div class="conversations__time">19:56</div>
+            </div>
+
+            <div class="conversation__inner">
+              <div class="conversations__conversation">Selon Julien, ça serait Sabrina.
+              </div>
+              <div class="conversations__time">19:57</div>
+            </div>
+
+            <div class="conversation__inner--me">
+              <div class="conversations__conversation conversations__conversation--me">Impossible !!! Elle ne ferait jamais ça, je la connais par coeur !!</div>
+              <div class="conversations__time">19:58</div>
+            </div>
+
+
+            <div class="conversation__inner">
+              <div class="conversations__conversation">Je sais que tu es proche d’elle mais peut-être que tu ne la connais pas aussi bien que tu ne le penses.
+              </div>
+              <div class="conversations__time">19:58</div>
+            </div>
+
+            <div class="conversation__inner--me">
+              <div class="conversations__conversation conversations__conversation--me">Je pense que vous devriez vous expliquez avec Sabrina.</div>
+              <div class="conversations__time">19:59</div>
+            </div>
+
+
+            <div class="conversation__inner">
+              <div class="conversations__conversation">Hors de question, je ne lui parlerais plus jamais !!
+              </div>
+              <div class="conversations__time">20:00</div>
+            </div>
+
+            <div class="conversation__inner--me">
+              <div class="conversations__conversation conversations__conversation--me">Je vais aller lui parler pour tirer ça au clair …</div>
+              <div class="conversations__time">20:01</div>
+            </div>
+
+
+            <div class="conversation__inner--me">
+              <div class="conversations__conversation conversations__conversation--me">Je viens de parler à Sabrina, elle ma dit que Julien avait menti, je pense vraiment que vous devriez en discuter avec elle.</div>
+              <div class="conversations__time">20:13</div>
+            </div>
+
+            <div class="conversation__inner">
+              <div class="conversations__conversation">Si tu le dis... Je verrai avec elle.
+              </div>
+              <div class="conversations__time">20:15</div>
+            </div>
+
+          </div>
           </div>
           <div class="window__inputs inputs">
             <form>
@@ -402,55 +597,55 @@
 
             <!-- PHOTOS SMALL -->
             <figure>
-              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__one">
-              <figcaption>aaa.jpg</figcaption>
+              <img src="../assets/akitainu2__mini.png" class="photos__miniature" alt="" id="photos__one">
+              <figcaption>Akitainu</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__two">
-              <figcaption>bbb.jpg</figcaption>
+              <img src="../assets/giletjaune__mini.png" class="photos__miniature" alt="" id="photos__two">
+              <figcaption>Gilet jaune</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__three">
-              <figcaption>ccc.jpg</figcaption>
+              <img src="../assets/soiree__mini.png" class="photos__miniature" alt="" id="photos__three">
+              <figcaption>Soirée</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__four">
-              <figcaption>ddd.jpg</figcaption>
+              <img src="../assets/phraseslove__mini.png" class="photos__miniature" alt="" id="photos__four">
+              <figcaption>Amour</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__five">
-              <figcaption>eee.jpg</figcaption>
+              <img src="../assets/capture__mini.png" class="photos__miniature" alt="" id="photos__five">
+              <figcaption>Louis</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image.png" class="photos__miniature" alt="" id="photos__six">
-              <figcaption>fff.jpg</figcaption>
+              <img src="../assets/mode__mini.png" class="photos__miniature" alt="" id="photos__six">
+              <figcaption>Sac rouge</figcaption>
             </figure>
 
 
             <!-- PHOTOS BIG -->
             <figure>
-              <img src="../assets/image__big.png" class="photo__big" id="photo__big--one" alt="">
-              <figcaption id="photo__desc--one" class="photo_desc">aaa.jpg</figcaption>
+              <img src="../assets/akitainu2.png" class="photo__big" id="photo__big--one" alt="">
+              <figcaption id="photo__desc--one" class="photo_desc">aaa.png</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image__big.png" class="photo__big" id="photo__big--two" alt="">
-              <figcaption id="photo__desc--two" class="photo_desc">bbb.jpg</figcaption>
+              <img src="../assets/giletjaune.png" class="photo__big" id="photo__big--two" alt="">
+              <figcaption id="photo__desc--two" class="photo_desc">bbb.png</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image__big.png" class="photo__big" id="photo__big--three" alt="">
-              <figcaption id="photo__desc--three" class="photo_desc">ccc.jpg</figcaption>
+              <img src="../assets/soiree.png" class="photo__big" id="photo__big--three" alt="">
+              <figcaption id="photo__desc--three" class="photo_desc">ccc.png</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image__big.png" class="photo__big" id="photo__big--four" alt="">
-              <figcaption id="photo__desc--four" class="photo_desc">ddd.jpg</figcaption>
+              <img src="../assets/phraseslove.png" class="photo__big" id="photo__big--four" alt="">
+              <figcaption id="photo__desc--four" class="photo_desc">ddd.png</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image__big.png" class="photo__big" id="photo__big--five" alt="">
-              <figcaption id="photo__desc--five" class="photo_desc">eee.jpg</figcaption>
+              <img src="../assets/capture.png" class="photo__big" id="photo__big--five" alt="">
+              <figcaption id="photo__desc--five" class="photo_desc">eee.png</figcaption>
             </figure>
             <figure>
-              <img src="../assets/image__big.png" class="photo__big" id="photo__big--six" alt="">
-              <figcaption id="photo__desc--six" class="photo_desc">fff.jpg</figcaption>
+              <img src="../assets/mode.png" class="photo__big" id="photo__big--six" alt="">
+              <figcaption id="photo__desc--six" class="photo_desc">fff.png</figcaption>
             </figure>
 
 
@@ -505,10 +700,10 @@
               </p>
             </div>
             <div class="notes__paper notes__paper--five">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+              <p>Faire le devoir d'anglais + demander au prof de math pour le DST de mardi prochain</p>
             </div>
             <div class="notes__paper notes__paper--six">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+              <p>Aller voir John pour lui parler</p>
             </div>
           </div>
         </div>
