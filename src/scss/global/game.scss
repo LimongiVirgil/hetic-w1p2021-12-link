@@ -10,9 +10,21 @@
  {
    outline:  none;
  }
+
+ img:hover {
+  cursor: pointer;
+ }
+
+ @keyframes bounce{
+  from {transform: translateY(0);}
+  50% {transform: translateY(-30px);}
+  to   {transform: translateY(0px);}
+}
  main {
   background: url('../../src/assets/wallpaper.png');
   background-size: cover;
+  height: 800px;
+  min-width: 1280px; 
 }
 input[type=text]:focus {
   outline: none;
@@ -64,7 +76,7 @@ input[type=text]:focus {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0086ed', endColorstr='#50a4e0', GradientType=0);
   /* IE6-9 */
   color: red;
-  height: 25px;
+  height: 30px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -76,25 +88,19 @@ input[type=text]:focus {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .icon__window {
-  height: 20px;
-  width: 20px;
-
-  &:hover {
-    cursor: pointer;
-  }
+  height: 27px;
+  width: 27px;
+  animation: bounce 0.7s ease infinite;
 }
 
 .icon__sound {
   height: 12px;
   width: 12px;
   padding-right: 20px;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .validation--close {
@@ -118,9 +124,6 @@ input[type=text]:focus {
 .photo--open {
   display: flex;
 }
-
-
-
 .dashboard__messages {
   width: 1000px;
   height: 500px;
@@ -204,6 +207,9 @@ input[type=text]:focus {
   display: flex;
   align-items: center;
 
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .contact__picture {
@@ -218,10 +224,6 @@ input[type=text]:focus {
   color: white;
   margin-left: 10px;
 }
-
-
-
-
 .messages__conversations {
   width: 1030px;
   display: none;
@@ -253,13 +255,9 @@ input[type=text]:focus {
 
 .conversations__time {
   color: white;
-  margin-left: 25px;
-
-
+  margin-left: 30px;
+  font-size:10px;
 }
-
-
-
 
 .conversations__conversation--me {
 
@@ -280,12 +278,12 @@ input[type=text]:focus {
 }
 
 .inputs__input {
-  width: 900px;
+  width: 920px;
   height: 25px;
   margin-left: 15px;
   border-radius: 30px;
   text-indent: 20px;
-  font-size: 20px;
+  font-size: 10px;
   border: none;
 }
 
@@ -293,7 +291,7 @@ input[type=text]:focus {
   height: 25px;
   width: 25px;
   border-radius: 30px;
-  margin-right: 10px;
+  margin-right: 25px;
 }
 
 
